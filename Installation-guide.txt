@@ -1,47 +1,47 @@
 ## Arch Linux Installation Guide
 
-Some of the commands to run:
+# Some of the commands to run:
 
 # link to help setup wireless connection 
 http://www.linuxandubuntu.com/home/how-to-setup-a-wifi-in-arch-linux-using-terminal
 
-# ping google.com  (CTRL-c to kill the ping)
-# timedatectl set-ntp true
-# timedatectl status
-# cfdisk
-# mkfs.ext4 /dev/sda1
-# mkswap /dev/sda2 
-# swapon /dev/sda2
-# mount /dev/sda1 /mnt
+ping google.com  (CTRL-c to kill the ping)
+timedatectl set-ntp true
+timedatectl status
+cfdisk
+mkfs.ext4 /dev/sda1
+mkswap /dev/sda2 
+swapon /dev/sda2
+mount /dev/sda1 /mnt
 
 # Now edit /etc/pacman.d/mirrorlist /
  / and remove most of the mirrors i.e. mainly Europe mirrors  
-# pacstrap /mnt base linux linux-firmware sudo vim
+pacstrap /mnt base linux linux-firmware sudo vim
 
-# genfstab -U /mnt >> /mnt/etc/fstab
-# arch-chroot /mnt
-# ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
-# hwclock --systohc
-# locale-gen
+genfstab -U /mnt >> /mnt/etc/fstab
+arch-chroot /mnt
+ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
+hwclock --systohc
+locale-gen
 
-# vim /etc/locale.conf
+vim /etc/locale.conf
 LANG=en_GB.UTF-8
 
-# vim /etc/hostname
+vim /etc/hostname
 myhostname  
 
-# vim /etc/hosts
+vim /etc/hosts
 127.0.0.1   localhost
 ::1         localhost
 127.0.1.1   myhostname.localdomain myhostname
 
-# passwd
-# useradd -m newusername 
-# passwd yourusername
-# usermod -aG wheel,audio,video,optical,storage yourusername
-# pacman -S vim
-# visudo
-# pacman -S grub
-# grub-install /dev/sda
-# grub-mkconfig -o /boot/grub/grub.cfg
-# pacman -S xorg
+passwd
+useradd -m newusername 
+passwd yourusername
+usermod -aG wheel,audio,video,optical,storage yourusername
+groups robq    to check groups added
+visudo
+pacman -S grub
+grub-install /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+pacman -S xorg
