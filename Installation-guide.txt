@@ -10,7 +10,11 @@ Some of the commands to run:
 # mkswap /dev/sda2 
 # swapon /dev/sda2
 # mount /dev/sda1 /mnt
+
+# Now edit /etc/pacman.d/mirrorlist /
+ / and remove most of the mirrors i.e. mainly Europe mirrors  
 # pacstrap /mnt base linux linux-firmware sudo vim
+
 # arch-chroot /mnt
 # ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
 # hwclock --systohc
