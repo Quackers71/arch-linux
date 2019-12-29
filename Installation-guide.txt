@@ -2,6 +2,9 @@
 
 Some of the commands to run:
 
+# link to help setup wireless connection 
+http://www.linuxandubuntu.com/home/how-to-setup-a-wifi-in-arch-linux-using-terminal
+
 # ping google.com  (CTRL-c to kill the ping)
 # timedatectl set-ntp true
 # timedatectl status
