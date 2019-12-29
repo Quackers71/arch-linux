@@ -15,24 +15,25 @@ Some of the commands to run:
  / and remove most of the mirrors i.e. mainly Europe mirrors  
 # pacstrap /mnt base linux linux-firmware sudo vim
 
+# genfstab -U /mnt >> /mnt/etc/fstab
 # arch-chroot /mnt
 # ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
 # hwclock --systohc
 # locale-gen
 
-# nano/etc/locale.conf
-LANG=en_US.UTF-8
+# vim /etc/locale.conf
+LANG=en_GB.UTF-8
 
-# nano /etc/hostname
-myhostname  (dt was what I used)
+# vim /etc/hostname
+myhostname  
 
-# nano /etc/hosts
-127.0.0.1 localhost
-::1          localhost
-127.0.1.1 myhostname.localdomain myhostname
+# vim /etc/hosts
+127.0.0.1   localhost
+::1         localhost
+127.0.1.1   myhostname.localdomain myhostname
 
 # passwd
-# useradd -m newusername (I used derek)
+# useradd -m newusername 
 # passwd yourusername
 # usermod -aG wheel,audio,video,optical,storage yourusername
 # pacman -S vim
