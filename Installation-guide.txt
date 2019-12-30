@@ -55,4 +55,8 @@ shutdown now
 systemctl start dhcpcd
 ping google.com
 
-sudo pacman -S xorg
+sudo su
+pacman -S xorg
+pacman -Syu
+pacman -S gnome
+systemctl enable gdm
