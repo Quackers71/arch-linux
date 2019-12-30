@@ -39,7 +39,7 @@ passwd
 useradd -m newusername 
 passwd yourusername
 usermod -aG wheel,audio,video,optical,storage yourusername
-groups robq    to check groups added
+groups yourusername # to check groups added
 visudo # Uncomment '%wheel ALL=(ALL) ALL'
 pacman -S grub
 grub-install /dev/sda
