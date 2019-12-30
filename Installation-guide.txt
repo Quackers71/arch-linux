@@ -16,7 +16,10 @@ mount /dev/sda1 /mnt
 
 # Now edit /etc/pacman.d/mirrorlist /
  / and remove most of the mirrors i.e. mainly Europe mirrors  
-pacstrap /mnt base linux linux-firmware sudo vim cryptsetup device-mapper dhcpcd diffutils e2fsprogs jfsutils less logrotate lvm2 man-db man-pages mdadm nano netctl perl reiserfsprogs s-nail sysfsutils texinfo usbutils vi which xfsprogs
+pacstrap /mnt base linux linux-firmware sudo vim cryptsetup device-mapper /
+dhcpcd diffutils e2fsprogs jfsutils less logrotate lvm2 man-db man-pages /
+mdadm nano netctl perl reiserfsprogs s-nail sysfsutils texinfo usbutils /
+vi which xfsprogs
 
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
